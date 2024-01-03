@@ -3,11 +3,11 @@
     using Dapr.Client;
     using producer.Models;
 
-    internal class Program
+    public class Program
     {
         static async Task Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            await GenerateMessagesAsync();
         }
 
         static async Task GenerateMessagesAsync()
@@ -34,7 +34,7 @@
             }
         }
 
-        static internal SampleMessage GenerateNewMessage()
+        static public SampleMessage GenerateNewMessage()
         {
             return new SampleMessage()
             {
@@ -46,7 +46,7 @@
             };
         }
 
-        static internal string GenerateRandomMessage()
+        static public string GenerateRandomMessage()
         {
             var random = new Random();
             var HashTags = new string[]
