@@ -1,14 +1,10 @@
 using System.Net;
-using System.Transactions;
-using System.Text;
 using Dapr.Client;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Extensions.Logging;
 using producer_fa.Models;
-using System.Text.Json.Serialization;
 using System.Text.Json;
-using Google.Protobuf;
 
 namespace producer_fa
 {
